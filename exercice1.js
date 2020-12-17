@@ -35,16 +35,15 @@ button.addEventListener('click', function (){
     }
 })
 
+let aleaPara = document.createElement('p');
 alea.addEventListener('click', function (){
     let x = Math.ceil(Math.random() * table.length-1);
-    console.log("x = " + x);
-    let aleaPara = document.createElement('p');
     aleaPara.innerHTML = table[x];
     document.getElementById('random').appendChild(aleaPara);
 })
 
+let frame = document.createElement('div');
 all.addEventListener('click', function (){
-    let frame = document.createElement('div');
     for (let idx = 0 ; idx < table.length ; idx++){
         frame.innerHTML += idx + " - " + table[idx] + '<br>';
         document.getElementById('random').appendChild(frame);
